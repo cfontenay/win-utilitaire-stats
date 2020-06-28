@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "utilitaire_stats_utilisation_ordi", "utilitaire_stats_utilisation_ordi\utilitaire_stats_utilisation_ordi.csproj", "{86C3AB80-74E4-4F79-95CF-C77CD74F39A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "utilitaire_stats_utilisation_ordi", "utilitaire_stats_utilisation_ordi\utilitaire_stats_utilisation_ordi.csproj", "{86C3AB80-74E4-4F79-95CF-C77CD74F39A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "workerService_utilitaire_stats", "workerService_utilitaire_stats\workerService_utilitaire_stats.csproj", "{B66FCA1F-CE4C-4E76-BD30-9E002DF78BBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{86C3AB80-74E4-4F79-95CF-C77CD74F39A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86C3AB80-74E4-4F79-95CF-C77CD74F39A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86C3AB80-74E4-4F79-95CF-C77CD74F39A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B66FCA1F-CE4C-4E76-BD30-9E002DF78BBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B66FCA1F-CE4C-4E76-BD30-9E002DF78BBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B66FCA1F-CE4C-4E76-BD30-9E002DF78BBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B66FCA1F-CE4C-4E76-BD30-9E002DF78BBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

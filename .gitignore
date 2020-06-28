@@ -338,3 +338,4 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/utilitaire_stats_utilisation_ordi/Properties/launchSettings.json

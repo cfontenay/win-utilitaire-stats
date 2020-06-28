@@ -54,7 +54,8 @@ namespace utilitaire_stats_utilisation_ordi
         {
             var stateManager = new StateManager();
             var saveManager = new SaveManager(args[0]);
-            
+
+
             while (true)
             {
                 stateManager.Update();
