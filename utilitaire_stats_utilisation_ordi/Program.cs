@@ -11,24 +11,20 @@ namespace utilitaire_stats_utilisation_ordi
     {
         
 
-        [DllImport("user32.dll", CharSet = CharSet.Unicode)]
-        static extern int GetWindowText(IntPtr hWnd, StringBuilder text, int count);
+        
 
         private delegate bool EnumWindowsProc(IntPtr hWnd, int lParam);
 
         [DllImport("user32.dll")]
         private static extern bool EnumWindows(EnumWindowsProc enumFunc, int lParam);
-
-        [DllImport("user32.dll")]
-        private static extern IntPtr GetShellWindow();
-        [DllImport("user32.dll")]
-        private static extern int GetWindowTextLength(IntPtr hWnd);
+        
 
         [DllImport("user32.dll")]
         private static extern bool IsWindowVisible(IntPtr hWnd);
 
         /// <summary>Returns a dictionary that contains the handle and title of all the open windows.</summary>
         /// <returns>A dictionary that contains the handle and title of all the open windows.</returns>
+        /*
         public static List<string> GetOpenWindows()
         {
             var shellWindow = GetShellWindow();
@@ -51,25 +47,18 @@ namespace utilitaire_stats_utilisation_ordi
 
             return windowNames;
         }
-        
-        
+        */
 
 
         static void Main(string[] args)
         {
-            const int nChars = 256;
-            StringBuilder Buff = new StringBuilder(nChars);
-            var defaultAudioDevice = GetDefaultRenderDevice();
-
+            var stateManager = new StateManager();
+            var saveManager = new SaveManager(args[0]);
+            
             while (true)
             {
-                IntPtr handle = GetForegroundWindow();
-                if (GetWindowText(handle, Buff, nChars) > 0)
-                {
-                    Console.WriteLine(Buff.ToString());
-                }
-                //GetOpenWindows().ForEach(x => Console.WriteLine(x));
-                Console.WriteLine(IsAudioPlaying(defaultAudioDevice));
+                stateManager.Update();
+                saveManager.Update(stateManager.CurrentState);
                 Thread.Sleep(200);
             }
        

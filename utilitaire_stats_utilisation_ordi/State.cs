@@ -11,11 +11,11 @@ namespace utilitaire_stats_utilisation_ordi
 
         public static bool operator ==(State s1, State s2)
         {
-            return true;
+            return s1.Name == s2.Name && s1.SoundPlaying == s2.SoundPlaying;
         }
         public static bool operator !=(State s1, State s2)
         {
-            return true;
+            return !(s1 == s2);
         }
         public State Clone()
         {
